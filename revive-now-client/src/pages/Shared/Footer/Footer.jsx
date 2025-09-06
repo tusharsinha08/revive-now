@@ -7,10 +7,10 @@ const Footer = () => {
 
                 {/* Logo & About */}
                 <div>
-                    <h2 className="flex items-center gap-2 text-2xl font-bold text-emerald-800">
+                    <Link to={"/"}><h2 className="flex items-center gap-2 text-2xl font-bold text-emerald-600">
                         <span className="bg-emerald-600 p-2 rounded-full text-white">+</span>
                         Revive <span className="text-orange-500">Now</span>
-                    </h2>
+                    </h2></Link>
                     <p className="mt-4 text-sm leading-relaxed">
                         Revive Now is dedicated to providing quality healthcare services and
                         modern treatment solutions for everyone.

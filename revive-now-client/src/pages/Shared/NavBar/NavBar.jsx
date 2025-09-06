@@ -33,7 +33,10 @@ const NavBar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Revive Now</a>
+                    <Link to={"/"}><h2 className="flex items-center gap-2 text-2xl font-bold text-emerald-600">
+                        <span className="bg-emerald-600 p-2 rounded-full text-white">+</span>
+                        Revive <span className="text-orange-500">Now</span>
+                    </h2></Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
