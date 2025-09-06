@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import img from '../../../assets/resources/female-doc.jpg'
 import imgTeeth from '../../../assets/resources/teeth02.png'
 import { FaPhone, FaRegClock } from "react-icons/fa6";
@@ -6,6 +7,16 @@ import { IoLocationOutline } from "react-icons/io5";
 
 
 const Details = () => {
+    const [selectedService, setSelectedService] = useState("Cavity Protection");
+
+    const services = ["Cavity Protection", "Cosmetic Dentistry", "Oral Surgery"];
+
+    const serviceDetails = {
+        "Cavity Protection": "Cavity protection helps prevent tooth decay by sealing vulnerable areas and maintaining oral health.",
+        "Cosmetic Dentistry": "Cosmetic dentistry improves the appearance of teeth, including whitening, veneers, and reshaping.",
+        "Oral Surgery": "Oral surgery involves procedures like tooth extractions, implants, and corrective jaw surgery.",
+    };
+
     return (
         <div className=''>
             <div className='flex flex-col md:flex-row gap-8'>
@@ -15,20 +26,33 @@ const Details = () => {
                 <div className='md:w-1/2 flex flex-col gap-4'>
                     <div className='space-y-8'>
                         <h3 className="text-4xl font-bold">Our Services</h3>
-                        <p className='text-lg'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam quia similique tempore, sapiente culpa ipsum. Illo culpa quae ratione? In?</p>
-                        <div className='grid md:grid-cols-3 grid-cols-2 gap-2'>
-                            <button className='btn p-8 text-lg font-bold border-amber-600 text-amber-600 rounded-md hover:bg-amber-600 hover:text-white'>Cavity Protection</button>
-                            <button className='btn p-8 text-lg font-bold border-amber-600 text-amber-600 rounded-md hover:bg-amber-600 hover:text-white'>Cosmetic Dentisty</button>
-                            <button className='btn p-8 text-lg font-bold border-amber-600 text-amber-600 rounded-md hover:bg-amber-600 hover:text-white'>Oral Surgery</button>
+                        <p className='text-lg'>What are you looking for? Select a service to learn more about it.</p>
+
+                        <div className="flex border rounded-lg overflow-hidden">
+                            {services.map((service) => (
+                                <button
+                                    key={service}
+                                    onClick={() => setSelectedService(service)}
+                                    className={`w-full p-2 text-2xl text-center font-semibold transition-colors
+                                                ${selectedService === service
+                                            ? "bg-orange-500 text-white"
+                                            : "bg-white text-gray-700 hover:bg-gray-100"
+                                        }`}
+                                >
+                                    {service}
+                                </button>
+                            ))}
                         </div>
+
                     </div>
+
                     <div>
                         <img className='rounded-lg border' src={imgTeeth} alt="" />
                     </div>
                     <div className='space-y-8'>
-                        <h3 className="text-3xl font-semibold">Electro Gastrology Therapy</h3>
-                        <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem autem hic inventore, ipsam suscipit accusamus debitis consequuntur voluptas culpa excepturi unde sed commodi at cupiditate aliquid voluptatem facilis animi sit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem possimus molestias dolores, hic omnis cupiditate iste itaque atque libero quisquam neque architecto maiores officia minima commodi? Tenetur placeat culpa similique?</p>
-                        
+                        <h3 className="text-3xl font-semibold">{selectedService}</h3>
+                        <p className='text-lg'>{serviceDetails[selectedService]}</p>
+
                         <button className='btn p-8 text-lg font-bold border-amber-600 text-amber-600 rounded-md hover:bg-amber-600 hover:text-white'>More Details</button>
                     </div>
                 </div>
