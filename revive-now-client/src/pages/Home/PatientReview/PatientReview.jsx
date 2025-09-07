@@ -28,7 +28,7 @@ const PatientReview = () => {
             <Swiper
                 navigation={true}
                 modules={[Navigation]}
-                className="mySwiper [&_.swiper-button-next]:!text-amber-600 [&_.swiper-button-prev]:!text-amber-600"
+                className="mySwiper [&_.swiper-button-next]:!text-[#F7A582] [&_.swiper-button-prev]:!text-[#F7A582]"
             >
                 {
                     reviews.map(review => <SwiperSlide
@@ -45,7 +45,7 @@ const PatientReview = () => {
                                         <div className="font-semibold opacity-60">{review.email}</div>
                                     </div>
                                 </div>
-                                <FaQuoteLeft className='text-4xl text-amber-600'></FaQuoteLeft>
+                                <FaQuoteLeft className='text-4xl text-[#F7A582]'></FaQuoteLeft>
                             </div>
                             <p className="list-col-wrap mt-4">
                                 {review.review}

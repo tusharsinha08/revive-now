@@ -10,7 +10,7 @@ const NavBar = () => {
         <li><Link to={"/services"}>Contact</Link></li>
         <li>
             <div className="dropdown">
-                <div tabIndex={0} role="button" className="bg-amber-400 rounded-4xl">Profile</div>
+                <div tabIndex={0} role="button" className="bg-[#F7A582] rounded-4xl">Profile</div>
                 <ul tabIndex={0} className="dropdown-content menu bg-gray-500/40 rounded-box z-1 w-52 shadow-sm">
                     <li><a>Item 1</a></li>
                     <li><a>Item 2</a></li>
@@ -35,7 +35,7 @@ const NavBar = () => {
                     </div>
                     <Link to={"/"}><h2 className="flex items-center gap-2 text-2xl font-bold text-emerald-600">
                         <span className="bg-emerald-600 p-2 rounded-full text-white">+</span>
-                        Revive <span className="text-orange-500">Now</span>
+                        Revive <span className="text-[#F7A582]">Now</span>
                     </h2></Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">

@@ -35,7 +35,7 @@ const Details = () => {
                                     onClick={() => setSelectedService(service)}
                                     className={`w-full p-2 text-2xl text-center font-semibold transition-colors
                                                 ${selectedService === service
-                                            ? "bg-orange-500 text-white"
+                                            ? "bg-[#F7A582] text-white"
                                             : "bg-white text-gray-700 hover:bg-gray-100"
                                         }`}
                                 >
@@ -53,7 +53,7 @@ const Details = () => {
                         <h3 className="text-3xl font-semibold">{selectedService}</h3>
                         <p className='text-lg'>{serviceDetails[selectedService]}</p>
 
-                        <button className='btn p-8 text-lg font-bold border-amber-600 text-amber-600 rounded-md hover:bg-amber-600 hover:text-white'>More Details</button>
+                        <button className='btn p-8 text-lg font-bold border-[#F7A582] text-[#F7A582] rounded-md hover:bg-[#F7A582] hover:text-white'>More Details</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Featured = () => {
                 <h3 className='text-4xl font-bold'>Our Expert Doctors</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque libero eius pariatur architecto illo nisi iusto vitae! Mollitia, numquam error!</p>
             </div>
-            <div className='grid md:grid-cols-3 justify-center gap-4'>
+            <div className='flex flex-col md:flex-row justify-between gap-4'>
                 {
                     featured.map(doctor => <Doctor
                         key={doctor._id}

@@ -9,7 +9,7 @@ const Footer = () => {
                 <div>
                     <Link to={"/"}><h2 className="flex items-center gap-2 text-2xl font-bold text-emerald-600">
                         <span className="bg-emerald-600 p-2 rounded-full text-white">+</span>
-                        Revive <span className="text-orange-500">Now</span>
+                        Revive <span className="text-[#F7A582]">Now</span>
                     </h2></Link>
                     <p className="mt-4 text-sm leading-relaxed">
                         Revive Now is dedicated to providing quality healthcare services and
@@ -17,7 +17,7 @@ const Footer = () => {
                     </p>
                     <Link
                         to="/appointment"
-                        className="inline-block mt-5 border border-orange-400 text-orange-500 font-semibold px-4 py-2 rounded-md hover:bg-orange-400 hover:text-white transition"
+                        className="inline-block mt-5 border border-[#F7A582] text-[#F7A582] font-semibold px-4 py-2 rounded-md hover:bg-[#F7A582] hover:text-white transition"
                     >
                         Appointment
                     </Link>

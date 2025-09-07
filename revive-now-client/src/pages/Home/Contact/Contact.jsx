@@ -144,7 +144,7 @@ const Contact = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="btn w-full p-8 text-lg font-bold rounded-md border-0 bg-orange-500 text-white hover:bg-white hover:text-orange-500"
+                            className="btn w-full p-8 text-lg font-bold rounded-md border-0 bg-[#F7A582] text-white hover:bg-white hover:text-[#F7A582]"
                         >
                             Book Now
                         </button>

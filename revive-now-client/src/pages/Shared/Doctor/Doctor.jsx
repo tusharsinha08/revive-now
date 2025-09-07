@@ -31,7 +31,7 @@ const Doctor = ({ doctor }) => {
                                 style={{ maxWidth: 180 }}
                                 value={doctor.rating}
                                 readOnly
-                                className="text-orange-400"
+                                className="text-[#F7A582]"
                             />
                         </div>
 
@@ -43,7 +43,7 @@ const Doctor = ({ doctor }) => {
                         </div>
                     </div>
                     <div className="">
-                        <button className="btn w-full p-8 text-lg font-bold border-orange-500 text-orange-500 rounded-md hover:bg-orange-500 hover:text-white">View Profile</button>
+                        <button className="btn w-full p-8 text-lg font-bold border-[#F7A582] text-[#F7A582] rounded-md hover:bg-[#F7A582] hover:text-white">View Profile</button>
                     </div>
                 </div>
             </div>
