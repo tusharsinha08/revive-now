@@ -2,16 +2,13 @@ import doc01 from '../../../assets/resources/doc01.png'
 import doc02 from '../../../assets/resources/doc02.png'
 import doc03 from '../../../assets/resources/doc03.png'
 import { Link } from 'react-router'
+import Background from '../../../components/Background/Background';
 
 const Banner = () => {
     
     return (
         <div className="bg-[#07332F] max-h-screen font-sans relative overflow-hidden px-4 lg:px-40 mb-32">
-            <>
-                <div className="absolute top-1/4 left-10 w-40 h-16 bg-white/5 rounded-full transform -rotate-45 opacity-50"></div>
-                <div className="absolute bottom-1/4 right-20 w-64 h-24 bg-white/5 rounded-full transform rotate-45 opacity-50"></div>
-                <div className="absolute top-20 right-1/3 w-32 h-12 bg-white/5 rounded-full transform -rotate-12 opacity-40"></div>
-            </>
+            <Background></Background>
             <div className="relative z-10 backdrop-blur-sm  max-h-screen">
                 <div className="container mx-auto px-6 py-16 lg:py-24">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">

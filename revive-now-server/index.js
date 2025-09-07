@@ -28,11 +28,19 @@ async function run() {
 
     const database = client.db('revive_now_db');
     const doctorsCollection = database.collection('doctors');
+    const servicesCollection = database.collection('services')
 
-
+    // doctors related api
     app.get('/doctors', async (req, res) => {
-        const result = await doctorsCollection.find().toArray()
-        res.send(result)
+      const result = await doctorsCollection.find().toArray()
+      res.send(result)
+    })
+
+
+    // services related api
+    app.get('/services', async (req, res) => {
+      const result = await servicesCollection.find().toArray()
+      res.send(result)
     })
 
 
@@ -48,9 +56,9 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send("Server is online")
+  res.send("Server is online")
 })
 
 app.listen(port, () => {
-    console.log(`Revive Now server is running on port ${port}`);
+  console.log(`Revive Now server is running on port ${port}`);
 })
